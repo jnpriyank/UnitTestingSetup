@@ -1,1 +1,31 @@
 
+// Current SetUp Info
+Unit Test Library         - Jasmine
+Test Runner               - Karma
+Browser/ headless browser - PhantomJS
+Code Coverage             - Istanbul
+
+Jasmine   - "jasmine-core": "~2.6.1",
+Karma     - "karma": "~1.7.0",
+            "karma-jasmine": "~1.1.0",
+            "karma-phantomjs-launcher@1.0.4"
+            "karma-coverage": "~1.1.1",   //  uses Istanbul
+PhantomJS - "phantomjs-prebuilt@2.1.4"
+Istanbul  - 
+
+"karma-chrome-launcher@2.1.1"
+"karma-firefox-launcher@1.0.1"
+
+// node paths
+C:\Program Files\nodejs
+    node_modules, node_modules\npm, node.exe, npm, npm.cmd, nodevars.bat, node_etw_provider.man,  node_perfctr_provider.man
+C:\Users\jai
+    .npmrc, .node_repl_history
+
+// Package.json
+"devDependencies": {
+    "jasmine-core": "~2.6.1",
+    "karma": "~1.7.0",
+    "karma-coverage": "~1.1.1",
+    "karma-jasmine": "~1.1.0",
+  }
