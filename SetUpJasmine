@@ -26,6 +26,116 @@ C:\Users\jai
 "devDependencies": {
     "jasmine-core": "~2.6.1",
     "karma": "~1.7.0",
-    "karma-coverage": "~1.1.1",
     "karma-jasmine": "~1.1.0",
+    "karma-phantomjs-launcher": "~1.0.4",
+    "karma-coverage": "~1.1.1",
   }
+
+// Karma.conf.js
+/* additional settings for Coverage start */
+ // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {
+    	// source files, that you wanna generate coverage for
+    	// do not include tests or libraries
+    	// (these files will be instrumented by Istanbul)
+    	'../src/jasmine_examples/*.js': ['coverage'],
+    	'jasmine_examples/*.js': ['coverage']
+    },
+
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['progress', 'coverage'],
+
+    coverageReporter: {
+    	dir: 'coverage/',
+    	reporters: [
+                { type: 'text' },
+                { type: 'html' },
+    	]
+    },
+/* additional settings for Coverage end */
+
+/* Karma.conf.js start */
+// Karma configuration
+// Generated on Wed May 10 2017 04:53:28 GMT+0530 (India Standard Time)
+
+module.exports = function(config) {
+  config.set({
+
+    // base path that will be used to resolve all patterns (eg. files, exclude)
+    basePath: '',
+
+
+    // frameworks to use
+    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    frameworks: ['jasmine'],
+
+
+    // list of files / patterns to load in the browser
+    files: [
+			'../src/jasmine_examples/*.js',
+			'helpers/jasmine_examples/*.js',
+			'jasmine_examples/*.js'
+    ],
+
+
+    // list of files to exclude
+    exclude: [
+    ],
+
+
+    // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {
+    	// source files, that you wanna generate coverage for
+    	// do not include tests or libraries
+    	// (these files will be instrumented by Istanbul)
+    	'../src/jasmine_examples/*.js': ['coverage'],
+    	'jasmine_examples/*.js': ['coverage']
+    },
+
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['progress', 'coverage'],
+
+    coverageReporter: {
+    	dir: 'coverage/',
+    	reporters: [
+                { type: 'text' },
+                { type: 'html' },
+    	]
+    },
+
+    // web server port
+    port: 9876,
+
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
+
+
+    // level of logging
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    logLevel: config.LOG_INFO,
+
+
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: true,
+
+
+    // start these browsers
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    browsers: ['PhantomJS'],
+   
+    // Continuous Integration mode
+    // if true, Karma captures browsers, runs the tests and exits
+    singleRun: true,
+
+    // Concurrency level
+    // how many browser should be started simultaneous
+    concurrency: Infinity   
+  })
+}
+/* Karma.conf.js end */
