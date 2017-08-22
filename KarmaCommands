@@ -1,5 +1,7 @@
 
+Note: Most of the framework adapters, reporters, preprocessors and launchers need to be loaded as plugins.
 
+karma init      //  generate an initial configuration file.
 karma start     //  it will search for karma configuration file in the current directory.
 karma start --help  // it will list all the options available with description.
 Karma - Spectacular Test Runner for JavaScript.
