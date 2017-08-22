@@ -1,1 +1,30 @@
 
+
+karma start     //  it will search for karma configuration file in the current directory.
+karma start --help  // it will list all the options available with description.
+Karma - Spectacular Test Runner for JavaScript.
+START - Start the server / do a single run.
+Usage:
+  C:\Program Files\nodejs\node.exe C:\Users\jai\AppData\Roaming\npm\node_modules\karma-cli\bin\karma start [<configFile>] [<options>]
+
+Options:
+  --port                         <integer> Port where the server is running.
+  --auto-watch                   Auto watch source files and run on change.
+  --detached                     Detach the server.
+  --no-auto-watch                Do not watch source files.
+  --log-level                    <disable | error | warn | info | debug> Level of logging.
+  --colors                       Use colors when reporting and printing logs.
+  --no-colors                    Do not use colors when reporting or printing logs.
+  --reporters                    List of reporters (available: dots, progress, junit, growl, coverage).
+  --browsers                     List of browsers to start (eg. --browsers Chrome,ChromeCanary,Firefox).
+  --capture-timeout              <integer> Kill browser if does not capture in given time [ms].
+  --single-run                   Run the test when browsers captured and exit.
+  --no-single-run                Disable single-run.
+  --report-slower-than           <integer> Report tests that are slower than given time [ms].
+  --fail-on-empty-test-suite     Fail on empty test suite.
+  --no-fail-on-empty-test-suite  Do not fail on empty test suite.
+  --help                         Print usage and options.
+  
+  e.g.
+  karma start --no-colors     //  will disable the colors in the report.
+  karma start --no-single-run //  will keep it running.
